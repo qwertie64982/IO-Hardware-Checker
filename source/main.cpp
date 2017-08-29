@@ -214,8 +214,8 @@ int main(int argc, char **argv) {
         }
         
         // Touch Screen
-        printf("\x1b[8;24H%04d", int(touch.px));
-        printf("\x1b[9;24H%04d", int(touch.py));
+        printf("\x1b[8;24H\x1b[37m%04d", int(touch.px));
+        printf("\x1b[9;24H\x1b[37m%04d", int(touch.py));
         
         gfxFlushBuffers();
         gfxSwapBuffers();
